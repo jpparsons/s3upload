@@ -35,10 +35,10 @@ Install Go via Homebrew
 brew install go
 ```
 and setup BASH shell variables
-
+```
 export GOPATH=$HOME/golang
 export PATH=$PATH:$GOPATH/bin
-
+```
 Clone this repository, change into the project directory s3upload and run
 ```
 make
