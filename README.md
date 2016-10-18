@@ -66,9 +66,9 @@ If you want to build it yourself, change into the project directory s3upload and
 docker build --tag=<your-image-name>:latest .
 ```
 and change the image constant in main.go
-
+```GO
 const imageName = "jpparsons/s3upload:latest"
-
+```
 to your image name. Rebuild the s3 binary by running make
 ```
 make
