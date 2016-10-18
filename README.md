@@ -47,13 +47,15 @@ This will build the Go binary "s3" for Mac OSX and install it in your $GOPATH/bi
 
 
 Basic usage of the s3 commandline utility
-
+```
+s3 -h
+```
 ```
 s3 -f <file> -b <s3 bucket name> -r <aws region>
 ```
 The above command will use Docker to download an image from Dockerhub that is configured with the AWS SDK.    
-A container is started and the file to be uploaded is bind mounted into this container. The AWS SDK is used to perform  
-the upload and the container is removed when uploading is complete.
+A container is started and the file to be uploaded is bind mounted into this container. The AWS SDK is  
+used to perform the upload and the container is removed when uploading is complete.
 
 ### How to build your own docker image for this project
 
