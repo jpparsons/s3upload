@@ -52,6 +52,8 @@ s3 -h
 ```
 ```
 s3 -f <file> -b <s3 bucket name> -r <aws region>
+
+s3 -f /Users/myname/foo.txt -b mybucket -r us-west-1
 ```
 The above command will use Docker to download an image from Dockerhub that is configured with the AWS SDK.    
 A container is started and the file to be uploaded is bind mounted into this container. The AWS SDK is  
