@@ -14,6 +14,8 @@ import (
 	"github.com/jpparsons/s3upload/dockerclient"
 )
 
+const imageName = "jpparsons/s3upload:latest"
+
 func main() {
 
 	logrus.SetLevel(logrus.InfoLevel)
@@ -54,7 +56,6 @@ func main() {
 	entrypoint := []string{"/bin/sh"}
 	portBindings := map[docker.Port][]docker.PortBinding{}
 	containerName := "s3"
-	imageName := "jpparsons/s3upload:latest"
 	options := client.CreateContainerOptions(containerName, imageName, entrypoint, portBindings, filepath)
 
 	container, err := client.CreateDockerContainer(options)
