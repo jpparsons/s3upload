@@ -24,7 +24,7 @@ Have access to an AWS S3 bucket. Authentication configuration is either of these
 * credentials file ~/.aws/credentials  
 * environment variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
 
-### Download the pre-compiles s3 binary for Mac OSX
+### Download the pre-compiled s3 binary for Mac OSX
 
 See the Releases section above to download the s3 commandline utility. Run 
 ```
