@@ -26,7 +26,7 @@ Have access to an AWS S3 bucket. Authentication configuration is either of these
 
 ### Download the pre-compiled s3 binary for Mac OSX
 
-See the Releases section above to download the s3 commandline utility. Run 
+See the release section above to download the s3 commandline utility. Run 
 ```
 s3 -h
 ```
