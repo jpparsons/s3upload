@@ -13,10 +13,7 @@ benefit is a portable way to perform S3 uploads from any docker enabled host.
 ### Prerequisites to run the S3 commandline  
 
 Mac OS X:
-Install Docker Toolbox 
-https://www.docker.com/products/docker-toolbox  
-
-or the new Docker for Mac
+Install Docker for Mac
 https://docs.docker.com/docker-for-mac/  
 
 Linux:  
