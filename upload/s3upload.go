@@ -33,6 +33,7 @@ func main() {
 		logrus.Fatal("Failed to open file", err)
 	}
 	filename = name + timestamp + extension
+	// end insert timestamp
 
 	filename = filename + ".gz"
 

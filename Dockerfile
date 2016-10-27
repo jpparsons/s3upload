@@ -1,3 +1,5 @@
-FROM golang:1.7.1-alpine
+FROM busybox
 
-COPY upload/s3upload /go/bin/s3upload
+# see https://github.com/CenturyLinkLabs/ca-certs-base-image
+COPY ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+COPY upload/s3upload /bin/s3upload

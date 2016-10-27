@@ -70,7 +70,6 @@ func (c *DockerClient) CreateDockerContainer(createContainerOptions *docker.Crea
 }
 
 func (c *DockerClient) pullDockerImage(imageName string) (*docker.Image, error) {
-	logrus.Println("Pulling docker image", imageName, "...")
 	authConfig, err := c.getAuthConfig(imageName)
 	if err != nil {
 		logrus.Debugln(err)

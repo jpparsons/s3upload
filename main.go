@@ -10,7 +10,6 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	"github.com/fsouza/go-dockerclient"
-
 	"github.com/jpparsons/s3upload/dockerclient"
 )
 
@@ -55,7 +54,7 @@ func main() {
 
 	entrypoint := []string{"/bin/sh"}
 	portBindings := map[docker.Port][]docker.PortBinding{}
-	containerName := "s3"
+	containerName := "upload2s3"
 	options := client.CreateContainerOptions(containerName, imageName, entrypoint, portBindings, filepath)
 
 	container, err := client.CreateDockerContainer(options)
@@ -66,7 +65,7 @@ func main() {
 
 	client.StartDockerContainer(container)
 
-	uploadcmd := []string{"/go/bin/s3upload -f " + *file}
+	uploadcmd := []string{"/bin/s3upload -f " + *file}
 	uploadcmd = append(uploadcmd, "-b "+*bucket)
 	uploadcmd = append(uploadcmd, "-r "+*region)
 	cmd := strings.Join(uploadcmd, " ")
